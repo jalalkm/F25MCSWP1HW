@@ -1,0 +1,228 @@
+/*-- By jalal_434823 & Hiba_450807 & Hussain_442221 & shaza_454550 */
+/* ===== هوية لونية ===== */
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #1a1a2e;
+    --text-light: #212529;
+    --text-dark: #f8f9fa;
+    --card-bg-light: #ffffff;
+    --card-bg-dark: #2d2d44;
+}
+
+body {
+    padding-top: 70px;
+    font-family: 'Tajawal', 'Cairo', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    direction: rtl; /* يدعم اللغة العربية بالكامل */
+    text-align: right;
+}
+@media (max-width: 992px) {
+    body {
+        padding-top: 60px;
+    }
+}
+
+/* نمط الوضع الداكن Dark Mode */
+body.dark-mode  {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+body.dark-mode .bg-light {
+    background-color: #2d2d44 !important;
+}
+
+body.dark-mode .bg-white {
+    background-color: #1a1a2e !important;
+}
+
+body.dark-mode .card {
+    background-color: var(--card-bg-dark);
+    color: var(--text-dark);
+    border-color: #3d3d5c;
+}
+
+body.dark-mode .card .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark-mode .event-card {
+    background-color: #2d2d44;
+}
+
+body.dark-mode .event-card .card-title {
+    color: #f8f9fa;
+}
+
+body.dark-mode .event-card .card-text {
+    color: #ced4da;
+}
+
+body.dark-mode .modal-content {
+    background-color: #2d2d44;
+    color: #f8f9fa;
+}
+
+body.dark-mode .modal-header {
+    border-bottom-color: #3d3d5c;
+}
+
+body.dark-mode .modal-footer {
+    border-top-color: #3d3d5c;
+}
+
+body.dark-mode .btn-close {
+    filter: invert(1);
+}
+
+/* تنسيق البادجات في الوضع الداكن */
+body.dark-mode .category-badge {
+    opacity: 0.9;
+}
+
+body.dark-mode .category-badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+body.dark-mode .category-badge.bg-info {
+    background-color: #0dcaf0 !important;
+    color: #212529 !important;
+}
+
+/* تحسين العناوين */
+.section-title {
+  border-right: 5px solid var(--primary);
+  padding-right: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.navbar {
+  opacity: 0.9;
+}
+
+/* slide */
+#featuredSlider {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#featuredSlider .carousel-inner {
+    height: 480px; /* ارتفاع مناسب */
+    max-height: 480px;
+    background: #f0f2f5;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carousel-item {
+  height: 480px;
+  background: #f8f9fa;
+}
+
+/* تقليل ارتفاع صور السلايدر */
+.carousel-item .slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* تغطية كاملة */
+  object-position: center 60%; /* إظهار الجزء العلوي من الصورة */
+  transition: transform 0.5s ease; /* تأثير حركة خفيف */
+}
+/* تكبير الصورة عند التمرير (تأثير إضافي) */
+.carousel-item:hover .slider-img {
+    transform: scale(1.02);
+}
+
+/* للنصوص والتعليقات */
+.carousel-caption {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    border-radius: 10px;
+    padding: 20px 25px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+}
+
+/* التكيف مع الشاشات المختلفة */
+@media (max-width: 992px) {
+    #featuredSlider .carousel-inner,
+    .carousel-item {
+        height: 400px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    #featuredSlider .carousel-inner,
+    .carousel-item {
+        height: 350px;
+        max-height: 350px;
+    }
+    
+    .carousel-item .slider-img {
+        object-position: center 30%;
+    }
+}
+
+@media (max-width: 576px) {
+    #featuredSlider .carousel-inner,
+    .carousel-item {
+        height: 250px;
+        max-height: 250px;
+    }
+    
+    .carousel-caption {
+        padding: 10px 15px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 0.9rem;
+    }
+    .carousel-caption p {
+        font-size: 0.7rem;
+    }
+}
+
+/* أزرار التحكم */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 25px;
+    background-size: 50%;
+}
+
+/* ===== بطاقات الفعاليات ===== */
+.event-card {
+    transition: transform 0.2s ease, box-shadow 0.2s;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+.event-card .card-img-top {
+    height: 160px;
+    object-fit: cover;
+}
+
+
+/* زر العودة إلى الأعلى */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: none;
+    z-index: 99;
+}
