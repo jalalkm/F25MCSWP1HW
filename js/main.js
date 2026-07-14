@@ -140,16 +140,16 @@ document.addEventListener('DOMContentLoaded', function() {
 // =============================================
 // 5. حفظ تفضيلات التصنيف في localStorage 
 // =============================================
-document.addEventListener('DOMContentLoaded', function() {
-    const filterSelect = document.getElementById('filterCategory');
-    if (filterSelect) {
-    const saved = localStorage.getItem('preferredCategory');
-    if (saved) filterSelect.value = saved;
-    filterSelect.addEventListener('change', function() {
-        localStorage.setItem('preferredCategory', this.value);
-    });
-    }
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     const filterSelect = document.getElementById('filterCategory');
+//     if (filterSelect) {
+//     const saved = localStorage.getItem('preferredCategory');
+//     if (saved) filterSelect.value = saved;
+//     filterSelect.addEventListener('change', function() {
+//         localStorage.setItem('preferredCategory', this.value);
+//     });
+//     }
+// });
 
 // =============================================
 
